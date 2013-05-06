@@ -16,7 +16,7 @@ for i in lista_cuento:
 
 #Se crea una lista que contiene tuplas de cada 'key' del diccionario con su respectivo valor, ordenadas por su valor de mayor a menor
 from operator import itemgetter
-diccionario_ordenado=sorted(diccionario_cuento.items(), key=itemgetter(1))
+diccionario_ordenado=sorted(diccionario_cuento.items(), key=itemgetter(1), reverse=True)
 
 #Imprime la lista de tuplas ya previamente ordenada con un salto de linea
 
