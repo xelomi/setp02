@@ -1,3 +1,7 @@
+#marcelo minay
+#realizar una función que determine el ganador del juego cachipun
+
+
 def ganador_cachipun(jugadores):     #r=piedra t=tijera p=papel
 	if len(jugadores)!=4:
 		Exception("Error la cantidad de datos ingresados no es válida")

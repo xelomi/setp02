@@ -1,26 +1,29 @@
-diccionario_cuento={} #Deficion del diccionario que tendrá cada palabra del cuento
+#marcelo Minay
+#Realizar una función que determine la cantidad de veces que se repite las palabras en un texto y mostrar por pantalla
 
-archivo=open('funes.txt',encoding='utf-8') #Se abre el cuento
-cuento=archivo.read()   #guarda todo el cuento en forma de String en la variable "cuento"
-archivo.close()         #cierra el archivo de texto
-cuento=cuento.lower()   #transforma el string con todo el cuento al mismo string con solo minusculas
-lista_cuento = cuento.split()   #crea una lista con cada palabra del cuento, esto incluye palabras repetidas
-diccionario_cuento = dict.fromkeys(lista_cuento,0)  #crea un diccionario a partir de la lista previamente creada, cada 'key' del diccionario es inicializada con el valor 0
 
-#Recorre la lista con las palabras del cuento
-for i in lista_cuento:
+diccionario_texto={} #Se genera el diccionario vacio para ser llenado
+
+archivo=open('funes.txt',encoding='utf-8') #Archivo abierto
+texto=archivo.read()   #guarda todo el texto en forma de String en la variable "texto"
+archivo.close()         #cierra el archivo
+texto=texto.lower()   #Deja el string solo con minisculas
+lista_texto = texto.split()   #Genera una lista con todas las palabras, incluso repetidas
+diccionario_texto = dict.fromkeys(lista_texto,0)  #crea un diccionario a partir de la lista previamente creada, cada valor asociado al key del diccionario es inicializada con el valor 0
+
+#Recorre la lista con las palabras del texto
+for i in lista_texto:
 
     #Si la palabra que está en la lista se encuentra en el diccionario se suma 1 al valor de la respectiva 'key' en el diccionario
-    if i in diccionario_cuento:
-        diccionario_cuento[i] = int(diccionario_cuento[i]+1)
+    if i in diccionario_texto:
+        diccionario_texto[i] = int(diccionario_texto[i]+1)
 
 #Se crea una lista que contiene tuplas de cada 'key' del diccionario con su respectivo valor, ordenadas por su valor de mayor a menor
 from operator import itemgetter
-diccionario_ordenado=sorted(diccionario_cuento.items(), key=itemgetter(1), reverse=True)
+diccionario_listo=sorted(diccionario_texto.items(), key=itemgetter(1), reverse=True)  #reverse ordena las palabras de mayor a menor
 
-#Imprime la lista de tuplas ya previamente ordenada con un salto de linea
+#Imprime la lista de tuplas ya ordenada
 
-espaciador=0.0
 
-for i in diccionario_ordenado:
+for i in diccionario_listo:
     print(i)
