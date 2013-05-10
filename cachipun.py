@@ -20,6 +20,6 @@ def ganador_cachipun(jugadores):     #r=piedra t=tijera p=papel
 	return 0
 
 jugadores= [[input("Ingrese el nombre del primer jugador "), input("Ingrese la Jugada primer ")], [input("Ingrese el nombre del segundo jugador "), input("Ingrese la Jugada jugador ")]]
-jugadores[0][1]=jugadores[0][1].upper
-jugadores[1][1]=jugadores[1][1].upper
+jugadores[0][1]=jugadores[0][1].upper()
+jugadores[1][1]=jugadores[1][1].upper()
 ganador_cachipun(jugadores)
