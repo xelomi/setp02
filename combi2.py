@@ -1,6 +1,11 @@
+#marcelo minay
+#Problema 4. Coeﬁciente del demonio 2.0
+
+
+
 #Funcion que determina las k combinaciones posibles de un set
 def combinatoria2(conjunto,k):
-    import itertools
+    import itertools    #librería que contiene la funcion combinations
 
     #Se declara una lista vacia
     lista_aux=[]
@@ -41,7 +46,7 @@ while True:
         break
     
 
-#Variable tipo lista que recibe todas las combinaciones posibles del un set determinado por el usuario
+#Variable tipo lista que recibe todas las combinaciones posibles de un set determinado por el usuario
 combinaciones=combinatoria2(conjunto,k)
 
 #Imprime la lista con todas las combinaciones posibles del set
