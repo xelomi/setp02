@@ -5,11 +5,11 @@
 def ganador_cachipun(jugadores):     #r=piedra t=tijera p=papel
 	if len(jugadores)!=4:
 		Exception("Error la cantidad de datos ingresados no es válida")
-	if jugadores[0][1] == 'r' or jugadores[0][1] == 'p' or jugadores[0][1] == 't':        #comprueba quien gana o si los usuarios cometieron una jugada inválida
-		if jugadores[1][1] == 'r' or jugadores[1][1] == 'p' or jugadores[1][1] == 't':
-			if (jugadores[0][1] == 'r' and jugadores[1][1] == 't') or (jugadores[0][1] == 'p' and jugadores[1][1] == 'r') or (jugadores[0][1] == 't' and jugadores[1][1] == 'p'):
+	if jugadores[0][1] == 'R' or jugadores[0][1] == 'P' or jugadores[0][1] == 'T':        #comprueba quien gana o si los usuarios cometieron una jugada inválida
+		if jugadores[1][1] == 'R' or jugadores[1][1] == 'P' or jugadores[1][1] == 'T':
+			if (jugadores[0][1] == 'R' and jugadores[1][1] == 'T') or (jugadores[0][1] == 'P' and jugadores[1][1] == 'R') or (jugadores[0][1] == 'T' and jugadores[1][1] == 'P'):
 				print(jugadores[0][0]," gana ", jugadores)
-			if jugadores[1][1] == 'r' and jugadores[0][1] == 't' or jugadores[1][1] == 'p' and jugadores[0][1] == 'r' or jugadores[1][1] == 't' and jugadores[0][1] == 'p':
+			if jugadores[1][1] == 'R' and jugadores[0][1] == 'T' or jugadores[1][1] == 'P' and jugadores[0][1] == 'R' or jugadores[1][1] == 'T' and jugadores[0][1] == 'P':
 				print(jugadores[1][0]," gana ", jugadores)
 			if jugadores[0][1]==jugadores[1][1]:
 				print(jugadores[0][0]," gana ", jugadores)
@@ -20,4 +20,6 @@ def ganador_cachipun(jugadores):     #r=piedra t=tijera p=papel
 	return 0
 
 jugadores= [[input("Ingrese el nombre del primer jugador "), input("Ingrese la Jugada primer ")], [input("Ingrese el nombre del segundo jugador "), input("Ingrese la Jugada jugador ")]]
+jugadores[0][1]=jugadores[0][1].upper
+jugadores[1][1]=jugadores[1][1].upper
 ganador_cachipun(jugadores)
